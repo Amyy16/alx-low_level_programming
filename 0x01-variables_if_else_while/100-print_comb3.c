@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-* main - prints numbers between 00 to 99
+* main - prints numbers between 00 to 89
 * Return: Always 0 (success)
 */
 int main(void)
@@ -15,14 +15,18 @@ int main(void)
 		i = 48;
 		while (i < 58)
 		{
-			putchar(e);
-			putchar(i);
-			if (i == 57 && e == 57)
+			if (e != i && e < i)
 			{
-				break;
+
+				putchar(e);
+				putchar(i);
+				if (i == 57 && e == 57)
+				{
+					break;
+				}
+				putchar(',');
+				putchar(',');
 			}
-			putchar(',');
-			putchar(',');
 			i++;
 		}
 		e++;
